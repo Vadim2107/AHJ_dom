@@ -21,8 +21,8 @@ let cellRaw = 0;
 let cellCol = 0;
 
 const image = document.createElement('img');
-image.style = ' display:flex;';
-image.setAttribute('src', 'https://raw.githubusercontent.com/madivira/ahj-dom/master/src/img/goblin.png');
+image.style = 'display:flex;';
+image.setAttribute('src', 'https://raw.githubusercontent.com/Vadim2107/AHJ_dom/main/src/img/goblin.png');
 
 function showImage() {
   const rawRandom = Math.floor(Math.random() * 4 + 1);

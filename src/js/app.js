@@ -14,7 +14,7 @@ for (let i = 4; i > 0; i -= 1) {
 const column = document.getElementsByClassName('column');
 // eslint-disable-next-line no-restricted-syntax
 for (const element of column) {
-  element.style = 'width: 120px; height: 120px; color: blue; display: inline-block; border: 4px solid black; margin-left: 4px';
+  element.style = 'width: 120px; height: 120px; background: #eee; display: inline-block; border: 4px solid black; border-radius: 50%; margin-left: 4px';
 }
 
 let cellRaw = 0;

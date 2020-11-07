@@ -16,8 +16,9 @@ let holeRow = 0;
 let holeCol = 0;
 
 const image = document.createElement('img');
-image.style = 'display:flex;';
-image.setAttribute('src', 'https://raw.githubusercontent.com/Vadim2107/AHJ_dom/main/src/img/goblin.png');
+image.style = 'display: flex;';
+image.className = 'img';
+// image.setAttribute('src', 'https://raw.githubusercontent.com/Vadim2107/AHJ_dom/main/src/img/goblin.png');
 // image.setAttribute('src', 'https://github.com/Vadim2107/AHJ_dom/blob/main/src/img/goblin.png');
 // image.setAttribute('src', '../img/goblin.png');
 // image.src = 'img/goblin.png';

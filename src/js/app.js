@@ -1,13 +1,13 @@
 const gameboard = document.getElementsByClassName('game-board')[0];
 
 for (let i = 4; i > 0; i -= 1) {
-  const raw = document.createElement('div');
-  raw.className = `raw-${i}`;
-  gameboard.insertBefore(raw, gameboard.firstChild);
+  const row = document.createElement('div');
+  row.className = `row-${i}`;
+  gameboard.insertBefore(row, gameboard.firstChild);
   for (let j = 4; j > 0; j -= 1) {
     const col = document.createElement('div');
     col.className = `column col-${j}`;
-    raw.insertBefore(col, raw.firstChild);
+    row.insertBefore(col, row.firstChild);
   }
 }
 
@@ -17,26 +17,27 @@ for (const element of column) {
   element.style = 'width: 120px; height: 120px; background: #eee; display: inline-block; border: 4px solid black; border-radius: 50%; margin-left: 4px';
 }
 
-let cellRaw = 0;
+let cellRow = 0;
 let cellCol = 0;
 
 const image = document.createElement('img');
 image.style = 'display:flex;';
-image.setAttribute('src', 'https://raw.githubusercontent.com/Vadim2107/AHJ_dom/main/src/img/goblin.png');
+image.setAttribute('src', 'https://row.githubusercontent.com/Vadim2107/AHJ_dom/main/src/img/goblin.png');
+// image.setAttribute('src', 'url(../img/goblin.png)');
 
 function showImage() {
-  const rawRandom = Math.floor(Math.random() * 4 + 1);
+  const rowRandom = Math.floor(Math.random() * 4 + 1);
   const colRandom = Math.floor(Math.random() * 4 + 1);
 
-  if (`${cellRaw}${cellCol}` === `${rawRandom}${colRandom}`) {
+  if (`${cellRow}${cellCol}` === `${rowRandom}${colRandom}`) {
     showImage();
   } else {
-    cellRaw = rawRandom;
+    cellRow = rowRandom;
     cellCol = colRandom;
-    const rawImage = document.getElementsByClassName(`raw-${cellRaw}`)[0];
-    const colImage = rawImage.getElementsByClassName(`col-${cellCol}`)[0];
+    const rowImage = document.getElementsByClassName(`row-${cellRow}`)[0];
+    const colImage = rowImage.getElementsByClassName(`col-${cellCol}`)[0];
     colImage.insertBefore(image, colImage.firstChild);
   }
 }
 
-setInterval(showImage, 1000);
+setInterval(showImage, 700);

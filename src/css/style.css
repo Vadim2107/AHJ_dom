@@ -1,9 +1,6 @@
 body {
   background: rgb(152, 247, 128);
-  /* background: url(../img/GracefulMiniatureBustard-small.gif); */
+  /* background-image: url('../img/GracefulMiniatureBustard-small.gif');
+  background-repeat: no-repeat; */
   text-align: center;
-}
-
-.img {
-  background: url(../img/goblin.png);
 }
